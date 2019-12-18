@@ -40,7 +40,7 @@ app.use((req, res, next) => {
 })
 
 var domainName = "ngngjhdjhd"
-var url = "https://"+ domainName+ "ngrok.io"
+var url = "https://9d3bdc6e.ngrok.io/";
 
 const port = process.env.PORT || 8083
 console.log(url );
