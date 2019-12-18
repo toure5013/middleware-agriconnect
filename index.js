@@ -43,7 +43,8 @@ app.use((req, res, next) => {
 const port = process.env.PORT || 8083
 
 app.get("*", (req, res)=>{
-    res.json("ngrok.......");
+
+    res.send("ngrok.......");
 })
 
 app.listen(port, ()=>{
