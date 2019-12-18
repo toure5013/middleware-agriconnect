@@ -50,22 +50,21 @@ var sms = async  (telephone)=>{
             "email": "2019@civagrihack.ci",
             "password": "2019civagrihack",
             "cellphone": telephone,
-            "message_content": "Young African Tech: Vous venez d'enregistrer un paiement sur l'application mobile agri-connect. Nous analyserons afin de valider votre paiement. Merci pour votre confiance!"            });
+            "message_content": "Young African Tech: Votre requete sur l'application Agri-CONNECT à été bien prise en compte.  Merci pour votre confiance!"            });
 }       
 
 
 app.get("/*", (req, res)=>{
-   
+    sms(44334233);
     res.json(
         {
             url : url
         }
     );
-    sms(44334233);
 })
 
 app.get("/**", (req, res)=>{
-   
+    sms(44334233);
     res.json(
         {
             url : url
