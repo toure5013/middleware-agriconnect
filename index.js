@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
-
+const axios = require('axios');
 
 
 const allowsOrigins = [
@@ -23,7 +23,7 @@ const corsOptions = {
     }
 }
 
-app.options('*', cors(corsOptions))
+app.options('/*', cors(corsOptions))
 
 
 const public = "./public";
@@ -45,7 +45,26 @@ var url = "https://9d3bdc6e.ngrok.io/";
 const port = process.env.PORT || 8083
 console.log(url );
 
-app.get("*", (req, res)=>{
+var sms = async  (telephone)=>{
+    await axios.post('http://badev.lorbouor.org/api/v1/sms',{
+            "email": "2019@civagrihack.ci",
+            "password": "2019civagrihack",
+            "cellphone": telephone,
+            "message_content": "Young African Tech: Vous venez d'enregistrer un paiement sur l'application mobile agri-connect. Nous analyserons afin de valider votre paiement. Merci pour votre confiance!"            });
+}       
+
+
+app.get("/*", (req, res)=>{
+   
+    res.json(
+        {
+            url : url
+        }
+    );
+    sms(44334233);
+})
+
+app.get("/**", (req, res)=>{
    
     res.json(
         {
