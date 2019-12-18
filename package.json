@@ -1,0 +1,19 @@
+{
+  "name": "middleware",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toure5013/middleware-agriconnect.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/toure5013/middleware-agriconnect/issues"
+  },
+  "homepage": "https://github.com/toure5013/middleware-agriconnect#readme"
+}
