@@ -39,12 +39,19 @@ app.use((req, res, next) => {
     next();
 })
 
+var domainName = "ngngjhdjhd"
+var url = "https://"+ domainName+ "ngrok.io"
 
 const port = process.env.PORT || 8083
+console.log(url );
 
 app.get("*", (req, res)=>{
-
-    res.send("ngrok.......");
+   
+    res.json(
+        {
+            url : url
+        }
+    );
 })
 
 app.listen(port, ()=>{
